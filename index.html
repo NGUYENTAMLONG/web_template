@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="scss/style.css" />
+    <!-- Link fontawesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+    />
+    <!-- Link bootstrap -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <!-- Link owlCarousel -->
+    <link rel="stylesheet" href="owlcarousel/owl.carousel.min.css" />
+    <link rel="stylesheet" href="owlcarousel/owl.theme.default.min.css" />
+  </head>
+  <body>
+    <form action="detail.html"></form>
+    <div class="header">
+      <div class="container">
+        <a class="header__logo" onclick="goToHome()" href="#">
+          <p><span>S</span>HOPPING</p>
+          <i class="fas fa-tags fa-2x"></i>
+        </a>
+        <ul class="header__menu">
+          <li onclick="goToHome()"><a href="#">Trang chủ</a></li>
+          <li id="menu_mom">
+            <a href="#" onclick="goToHome()">Sản phẩm</a>
+            <ul class="header__menu__sub">
+              <li
+                class="header__menu__sub__item"
+                onclick="menuChoose('hoodie')"
+              >
+                Áo hoodie
+              </li>
+              <li
+                class="header__menu__sub__item"
+                onclick="menuChoose('jacket')"
+              >
+                Áo khoác
+              </li>
+              <li class="header__menu__sub__item" onclick="menuChoose('shirt')">
+                Áo cộc
+              </li>
+              <hr />
+              <li class="header__menu__sub__item" onclick="menuChoose('jeans')">
+                Quần jean
+              </li>
+              <li class="header__menu__sub__item" onclick="menuChoose('vải')">
+                Quần vải
+              </li>
+              <li class="header__menu__sub__item" onclick="menuChoose('short')">
+                Quần short
+              </li>
+              <hr />
+              <li
+                class="header__menu__sub__item"
+                onclick="menuChoose('glasses')"
+              >
+                Kính
+              </li>
+              <li class="header__menu__sub__item" onclick="menuChoose('bag')">
+                Túi sách
+              </li>
+            </ul>
+          </li>
+          <li><a href="#">Liên hệ</a></li>
+          <li><a href="#">Giỏ hàng</a></li>
+          <li><a href="#">Bài viết</a></li>
+          <li><a href="#">Thông báo</a></li>
+        </ul>
+        <div class="header__account">
+          <p class="header__account__user"></p>
+          <img
+            src="https://virl.bc.ca/wp-content/uploads/2019/01/AccountIcon2.png"
+            alt=""
+          />
+          <ul class="header__account__identity">
+            <li
+              class="exit"
+              data-toggle="modal"
+              data-target="#exampleModal_login"
+            >
+              Đăng nhập
+            </li>
+            <li
+              class="register"
+              data-toggle="modal"
+              data-target="#exampleModal_register"
+            >
+              Đăng ký
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="Hotbg">
+        <input
+          type="text"
+          name=""
+          class="Hotbg-txt"
+          placeholder="Tìm kiếm sản phẩm"
+        />
+        <button class="Hotbg-btn" type="submit" onclick="searching()">
+          <i class="fa fa-search"></i>
+        </button>
+      </div>
+    </div>
+    <div class="side">
+      <a class="cart" href="cart.html">
+        <i class="fas fa-3x fa-shopping-cart">
+          <span class="badge bg-danger"></span
+        ></i>
+      </a>
+      <div class="side__backTop">
+        <i class="fas fa-3x fa-arrow-circle-up" onclick="backToTop()"></i>
+      </div>
+    </div>
+    <!-- Body -->
+    <div class="body">
+      <div class="container">
+        <div class="carousel">
+          <div class="owl-carousel owl-theme row container">
+            <img src="Images/banners/890e6cc5-levis-banner.jpg" alt="" />
+            <img src="Images/banners/1 (1).jpg" alt="" />
+
+            <img
+              src="Images/banners/2840a743e5b82d8c06a479f66fe8401a.png"
+              alt=""
+            />
+            <img src="Images/banners/LEGO-Levis-Feature-Photo.jpg" alt="" />
+            <img
+              src="Images/banners/banner-thoi-trang-giam-gia_113856960.jpg"
+              alt=""
+            />
+            <img src="Images/banners/list.jpg" alt="" />
+            <img src="Images/banners/3.jpg" alt="" />
+          </div>
+        </div>
+
+        <div class="row listProducts" id="list">
+          <!-- <div class="col-6 col-sm-6 col-md-4 col-lg-3 col-xl-3">
+            <div class="item container-ellipsis">
+              <i class="fas fa-tag tag"></i>
+              <img class="item_new" src="Images/banners/179452.png" alt="" />
+              <p class="sale">25%</p>
+              <div class="item__image">
+                <img src="Images/LevisWomensJacket11.jpg" alt="" />
+              </div>
+              <a href="#" class="item__name"><h2>Levis Womens Jacket</h2></a>
+              <b>550.000 VND <del>700.000 VND</del></b>
+              <div class="item__buy">
+                <p>Thêm vào giỏ hàng <i class="fas fa-cart-arrow-down"></i></p>
+              </div>
+            </div>
+          </div> -->
+          <div class="row wrapper"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal login -->
+    <div
+      class="modal fade"
+      id="exampleModal_login"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">
+              Đăng nhập <i class="fas fa-keyboard"></i>
+            </h5>
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true" class="closeX">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <form>
+              <div class="mb-3">
+                <label class="form-label">Tên tài khoản</label>
+                <input type="text" class="form-control accountUserLogin" />
+              </div>
+              <div class="mb-3">
+                <label class="form-label">Mật khẩu</label>
+                <input type="password" class="form-control passUserLogin" />
+              </div>
+
+              <button type="submit" class="btn btn-success loginBtn">
+                Đăng nhập <i class="fas fa-paper-plane"></i>
+              </button>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-dismiss="modal"
+            >
+              Hủy bỏ <i class="fas fa-sign-out-alt"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Modal register -->
+    <div
+      class="modal fade"
+      id="exampleModal_register"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">
+              Mời bạn điền vào form đăng ký !!! <i class="fas fa-keyboard"></i>
+            </h5>
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <form>
+              <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label"
+                  >Họ và tên</label
+                >
+                <input type="text" class="form-control nameUser" />
+              </div>
+              <div class="mb-3">
+                <label class="form-label">Tên tài khoản</label>
+                <input type="text" class="form-control accountUser" />
+              </div>
+              <div class="mb-3 passField">
+                <label class="form-label">Mật khẩu</label>
+                <input type="text" class="form-control passUser" />
+                <i class="fas fa-2x fa-eye" id="togglePassword"></i>
+              </div>
+              <div class="mb-3">
+                <label class="form-label">Email</label>
+                <input type="email" class="form-control emailUser" />
+              </div>
+              <div class="mb-3 form-check">
+                <input
+                  type="checkbox"
+                  class="form-check-input checkEmail"
+                  id="exampleCheck1"
+                />
+                <label class="form-check-label" for="exampleCheck1"
+                  >Nhận thông báo của chúng tôi mỗi ngày !!!</label
+                >
+              </div>
+              <button type="submit" class="btn btn-success registerBtn">
+                Đăng ký <i class="fas fa-paper-plane"></i>
+              </button>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-dismiss="modal"
+            >
+              Hủy bỏ <i class="fas fa-sign-out-alt"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer (copy) -->
+    <footer class="new_footer_area bg_color">
+      <div class="new_footer_top">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-3 col-md-6">
+              <div
+                class="f_widget company_widget wow fadeInLeft"
+                data-wow-delay="0.2s"
+                style="
+                  visibility: visible;
+                  animation-delay: 0.2s;
+                  animation-name: fadeInLeft;
+                "
+              >
+                <h3 class="f-title f_600 t_color f_size_18">
+                  Liên lạc với chúng tôi
+                </h3>
+                <p>
+                  Đừng bỏ lỡ bất kỳ cập nhật nào về các mẫu sản phẩm và sự kiện
+                  mới của chúng tôi 💚!
+                </p>
+                <form
+                  action="#"
+                  class="f_subscribe_two mailchimp"
+                  method="post"
+                  novalidate="true"
+                  _lpchecked="1"
+                >
+                  <input
+                    type="text"
+                    name="EMAIL"
+                    class="form-control memail"
+                    placeholder="Email"
+                  />
+
+                  <button
+                    class="btn btn_get btn_get_two"
+                    style="border: chartreuse solid 1px; color: #858da8"
+                    type="submit"
+                  >
+                    Gửi ✈
+                  </button>
+                  <img src="Images/banners/payment.png" class="mt-4" alt="" />
+                  <p>Cung cấp bởi <a href="#">Bizweb</a> .</p>
+                </form>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+              <div
+                class="f_widget about-widget pl_70 wow fadeInLeft"
+                data-wow-delay="0.4s"
+                style="
+                  visibility: visible;
+                  animation-delay: 0.4s;
+                  animation-name: fadeInLeft;
+                "
+              >
+                <h3 class="f-title f_600 t_color f_size_18">Cửa hàng</h3>
+                <ul class="list-unstyled f_list">
+                  <li><a href="#">Sản phẩm</a></li>
+                  <li><a href="#">Bài viết</a></li>
+                  <li><a href="#">Hướng dẫn mua hàng</a></li>
+                  <li><a href="#">Chính sách đổi trả</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+              <div
+                class="f_widget about-widget pl_70 wow fadeInLeft"
+                data-wow-delay="0.6s"
+                style="
+                  visibility: visible;
+                  animation-delay: 0.6s;
+                  animation-name: fadeInLeft;
+                "
+              >
+                <h3 class="f-title f_600 t_color f_size_18">Tư vấn</h3>
+
+                <ul class="list-unstyled f_list">
+                  <li><a href="#">FAQ</a></li>
+                  <li><a href="#">Tuyển dụng</a></li>
+                  <li><a href="#">Cộng tác viên</a></li>
+                  <li><a href="#">Điều khoản & điều kiện</a></li>
+                  <li><a href="#">Báo cáo</a></li>
+                  <li><a href="#">Tài liệu</a></li>
+                  <li><a href="#">Thông tin riêng tư</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+              <div
+                class="f_widget social-widget pl_70 wow fadeInLeft"
+                data-wow-delay="0.8s"
+                style="
+                  visibility: visible;
+                  animation-delay: 0.8s;
+                  animation-name: fadeInLeft;
+                "
+              >
+                <h3 class="f-title f_600 t_color f_size_18">Mạng xã hội</h3>
+                <div class="f_social_icon">
+                  <a href="#" class="fab fa-facebook"></a>
+                  <a href="#" class="fab fa-twitter"></a>
+                  <a href="#" class="fab fa-linkedin"></a>
+                  <a href="#" class="fab fa-pinterest"></a>
+                </div>
+              </div>
+              <div class="mt-4 location" style="color: #858da8">
+                <h3 class="f-title f_600 t_color f_size_18">
+                  Hệ thống cửa hàng
+                </h3>
+                <div>
+                  <i class="fas fa-map-marker-alt"></i> Số 35 ngõ 381 đường
+                  Nguyễn Khang, Cầu Giấy, Hà Nội ( Tầng 2 Vinmart )
+                </div>
+                <div>
+                  <i class="fas fa-map-marker-alt"></i> 05 Lê Lợi - TP Bắc Giang
+                </div>
+
+                <div>
+                  <i class="fas fa-map-marker-alt"></i> 22 Nguyễn Cao, Phường
+                  Ninh Xá, TP Bắc Ninh
+                </div>
+
+                <div>
+                  <i class="fas fa-map-marker-alt"></i> 100 Nguyễn Văn Cừ - TP
+                  Vinh - Nghệ An
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="footer_bg">
+          <div class="footer_bg_one"></div>
+          <div class="footer_bg_two"></div>
+        </div>
+      </div>
+      <div class="footer_bottom">
+        <div class="container">
+          <div class="row align-items-center">
+            <div class="col-lg-6 col-sm-7">
+              <p class="mb-0 f_400">
+                © cakecounter Inc.. 2019 All rights reserved.
+              </p>
+            </div>
+            <div class="col-lg-6 col-sm-5 text-right">
+              <p>
+                Made with <i class="icon_heart"></i> in
+                <a href="#">CakeCounter</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+  <script></script>
+  <!-- Link jquery -->
+  <script
+    src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"
+  ></script>
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"
+  ></script>
+  <script
+    src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"
+  ></script>
+  <!-- link owl carousel -->
+  <script src="owlcarousel/owl.carousel.min.js"></script>
+  <!-- ********************* -->
+  <!-- Link paging -->
+  <!-- <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script> -->
+  <script src="https://pagination.js.org/dist/2.1.4/pagination.min.js"></script>
+  <link
+    rel="stylesheet"
+    href="https://pagination.js.org/dist/2.1.4/pagination.css"
+  />
+  <!-- ************** -->
+  <script>
+    $(".owl-carousel").owlCarousel({
+      loop: true,
+      nav: false,
+      autoplay: true,
+      autoplayTimeout: 3000,
+      autoplayHoverPause: true,
+      responsive: {
+        1200: {
+          items: 1,
+        },
+      },
+    });
+  </script>
+  <!--link searching.js  -->
+  <script src="javascript/searching.js"></script>
+  <!--link menuSearch.js  -->
+  <script src="javascript/menuSearch.js"></script>
+  <script>
+    // Back to top
+    function backToTop() {
+      window.scroll({
+        top: 0,
+        behavior: "smooth",
+      });
+    }
+    // ***********************
+    var listProducts = document.querySelector(".listProducts");
+    function goToHome() {
+      fetch("http://localhost:3000/products")
+        .then(function (response) {
+          return response.json();
+        })
+        .then((data) => {
+          $("#list").pagination({
+            dataSource: data, // truyền tất cả các dữ liệu
+            pageSize: 10, // đặt số lượng sản phẩm một trang b muốn
+            callback: function (data, pagination) {
+              var wrapper = $("#list .wrapper").empty();
+              $.each(data, function (i, f) {
+                $(
+                  "#list .wrapper"
+                ).append(`<div class="col-6 col-sm-6 col-md-4 col-lg-3 col-xl-3">
+                <div class="item container-ellipsis">
+
+                    ${
+                      f.new !== false
+                        ? "<img class='item_new' src='Images/banners/179452.png' alt='' /> "
+                        : ""
+                    }
+
+                  ${f.sale !== "" ? " <i class='fas fa-tag tag'></i>" : ""}
+
+                  ${f.sale !== "" ? " <p class='sale'>" + f.sale + "</p> " : ""}
+                  <div class="item__image">
+                    <img src="${f.img}" alt="" />
+                  </div>
+                  <a href="#" class="item__name"><h2>${f.name}</h2></a>
+                  <b>${
+                    f.price
+                  } VND <del>${f.old_price !== "" ? f.old_price : ""}</del></b>
+                  <div class="item__buy">
+                    <p>Thêm vào giỏ hàng <i class="fas fa-cart-arrow-down"></i></p>
+                  </div>
+                </div>
+              </div>`);
+              });
+              let number = 0;
+              document
+                .querySelectorAll(".item__buy")
+                .forEach((element, index) => {
+                  element.onclick = function () {
+                    console.log(
+                      document.querySelectorAll(".item__name")[index]
+                    );
+                    number += 1;
+                    document.querySelector(".badge").innerHTML = number;
+                  };
+                });
+              document.querySelectorAll(".item__name").forEach((item) => {
+                item.onclick = function () {
+                  console.log(item);
+                };
+              });
+            },
+          });
+        })
+        .catch((error) => {
+          console.error("Error:", error);
+        });
+    }
+    window.onload = goToHome;
+  </script>
+  <script></script>
+  <script src="javascript/handleRegister.js"></script>
+  <script src="javascript/handleLogin.js"></script>
+</html>

@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+    />
+    <!-- link stichky table bootstrap -->
+
+    <link rel="stylesheet" href="scss/admin.css">
+  </head>
+  <body>
+    <div class="side">
+      <button type="button" class="btn btn-primary add_item_btn" onclick="showCreateForm()">
+        Thêm sản phẩm
+        <i class="fas fa-tshirt"></i>
+      </button>
+        <div class="side__backTop">
+          <i class="fas fa-3x fa-arrow-circle-up" onclick="backToTop()"></i>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <h1>Quyền truy cập: <span></span></h1>
+      <h2 class="text-center">👕 Danh sách các sản phẩm 📖</h2>
+      <input class="form-control" id="myInput" type="text" placeholder="👀Tìm kiếm sản phẩm ...">
+      <div class="general">
+  
+
+      </div>
+      <table
+        class="
+          table table-dark table-hover table-striped table-fixed table-bordered
+          border-success mt-4
+        "
+      >
+        <thead class="bg-success text-center">
+          <tr>
+            <th scope="col" class="header-fixed">STT</th>
+            <th scope="col" class="header-fixed">ID</th>
+            <th scope="col" class="header-fixed">Tên SP</th>
+            <th scope="col" class="header-fixed">Ảnh</th>
+            <th scope="col" class="header-fixed">Giá</th>
+            <th scope="col" class="header-fixed">Giá cũ</th>
+            <th scope="col" class="header-fixed">Sale</th>
+            <th scope="col" class="header-fixed">Loại</th>
+            <th scope="col" class="header-fixed">New</th>
+            <th scope="col" class="header-fixed">SL</th>
+            <th scope="col" class="header-fixed">Size</th>
+            <th scope="col" class="header-fixed">Mô tả</th>
+            <th scope="col" class="header-fixed">Xử lí</th>
+          </tr>
+        </thead>
+
+        <tbody id="myTable"></tbody>
+      </table>
+    </div>
+    
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">🤔 Bạn có chắc muốn xóa sản phẩm không ⁉️</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        ...
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary confirmDelete" >Chấp nhận <i class="fas fa-dumpster-fire"></i></button>
+        <button type="button" class="btn btn-danger" data-dismiss="modal">Hủy bỏ <i class="fas fa-sign-out-alt"></i></button>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="exampleModal_form" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel"> Bạn hãy điền thông tin vào mẫu ✍️</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body2">
+        
+        </div>
+      </div>
+      
+    </div> 
+  </div>
+</div>
+<!--CREATE FORM -->
+     <div class="create_form">
+        <div class="create_form_title"><h2>
+          Điền thông tin sản phẩm cần thêm
+        </h2></div>
+        <hr>
+        <div class="box">
+          <div class="col_1">
+            <span>Tên sản phẩm </span>
+            <input type="text" class="create_name" placeholder="Ví dụ: T-shirt BAPE III" >
+            <span>Giá sản phẩm</span>
+            <input type="text" class="create_price" placeholder="Ví dụ: 300.000 ( không bao gồm 'VND')">
+            <span>% Sale</span>
+            <input type="text" class="create_sale"  placeholder="Ví dụ: 50%">
+            <span>Giá cũ</span>
+            <input type="text" class="create_oldprice"  placeholder="Ví dụ: 600.000 VND (bao gồm cả 'VND')">
+            <span>Loại sản phẩm</span>
+            <input type="text" class="create_type" placeholder="Ví dụ: shirt/pants/jeans/jacket/..">
+            <span>Số lượng</span>
+            <input type="text" class="create_numbers" placeholder="Ví dụ: 150">
+            <span>Size</span>
+            <input type="text" class="create_sizes" placeholder="Ví dụ: S,M,L">
+          </div>
+  
+          <div class="col_2">
+            <span>New</span>
+            <input type="checkbox" class="create_new">
+            <span>Mô tả sản phẩm</span>
+            <textarea class="create_desc"placeholder="Ví dụ: Áo cộc tay màu trắng unisex, chất liệu cotton co dãn thoáng mát,...."></textarea>
+            <span>Ảnh</span>
+            <input type="file" class="create_img pl-3" onchange="changeCreateImg()">
+            <div class="view2 p-2" style="padding: 5px; border: dashed 3px white; margin-bottom: 10px;"> </div>
+            <div style="border-top: white solid 2px; padding-top: 20px;">
+              <button class="btn btn-success createBtn" onclick="handleCreate(event)"> Tạo sản phẩm!!!</button>
+              <button class="btn btn-warning createAgainBtn" onclick="createAgainBtn()"> Tạo lại !!!</button>
+              <button class="btn btn-danger exitBtn"> Hủy bỏ !!!</button>
+            </div>
+          </div>
+        </div>
+       
+       
+      
+
+     </div>
+<div class="cover"></div>
+    <div id="list"><div class="wrapper"></div></div>
+
+  </body>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<!-- jquery link -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<!-- handle Delete -->
+  <script src="javascript/handleDelete.js"></script>
+  <!-- handle Update -->
+  <script src="javascript/handleUpdate.js"></script>
+   <!-- handle Create -->
+   <script src="javascript/handleCreate.js"></script>
+   <!-- Link pagination -->
+   <script src="https://pagination.js.org/dist/2.1.4/pagination.min.js"></script>
+   <link
+     rel="stylesheet"
+     href="https://pagination.js.org/dist/2.1.4/pagination.css"
+   />
+  <script>
+    let API = "http://localhost:3000/products";
+    const tbody = document.querySelector("tbody");
+    fetch(API)
+      .then(function (response) {
+        return response.json();
+      })
+      .then((data) => {
+        function getSum(type) {
+          let sum = 0;
+          data.forEach((item,index)=>{
+          if(item.type==type)
+        {
+              sum = sum +1;
+        }})
+        return sum;
+        }
+        let sumShirt = getSum("shirt");
+        let sumJacket = getSum("jacket");
+        let sumJeans = getSum("jeans");
+        let sumGlasses = getSum("glasses");
+        let sumBag = getSum("bag");  
+        let sumShort = getSum("short");  
+        let sumHoodie= getSum("hoodie");        
+
+        document.querySelector(".general").innerHTML = `<b class="float-right mt-2">Tổng số sản phẩm: <span class="badge bg-primary">${data.length}</span></b>
+        <b class="float-left mt-2 mr-4">Tổng số mỗi loại:</b>
+        <p class="float-left mt-2 mr-4">Áo cộc: <span class="badge bg-warning">${sumShirt}</span></p>
+        <p class="float-left mt-2 mr-4">Áo khoác: <span class="badge bg-danger text-light">${sumJacket}</span></p>
+        <p class="float-left mt-2 mr-4">Quần jeans: <span class="badge bg-success">${sumJeans}</span></p>
+        <p class="float-left mt-2 mr-4">Kính: <span class="badge bg-info">${sumGlasses}</span></p>
+        <p class="float-left mt-2 mr-4">Túi: <span class="badge bg-dark text-light">${sumBag}</span></p>
+        <p class="float-left mt-2 mr-4">Quần short: <span class="badge bg-secondary text-dark">${sumShort}</span></p>
+        <p class="float-left mt-2 mr-4">Áo hoodie: <span class="badge bg-primary text-light">${sumHoodie}</span></p>
+        `
+        var htmls = data.map((product, index) => {
+          return `
+                    <tr>
+                    <th scope="row" class="stt">${index + 1}</th>
+                    <td class="product__id">${product.id}</td>
+                    <td class="product__name">${product.name}</td>
+                    <td class="product__img"> <img src="${
+                      product.img
+                    }" style="height:100px;width:100px" alt=""/></td>
+                    <td class="product__price">${product.price}</td>
+                    <td class="product__old_price">${product.old_price}</td>
+                    <td class="product__sale">${product.sale}</td>
+                    <td class="product__type">${product.type}</td>
+                    <td class="product__new">${product.new}</td>
+                    <td class="product__numbers">${product.numbers}</td>
+                    <td class="product__size">${product.size}</td>
+
+                    <td class="product__desc">${product.desc}</td>
+                    <td><button type="button" class="btn btn-danger"  data-toggle="modal" data-target="#exampleModal">Xoá <i class="fas fa-trash-alt"></i></button><button type="button" class="btn btn-warning mt-1" data-toggle="modal" data-target="#exampleModal_form">Sửa <i class="fas fa-edit"></i></button>
+                   
+</td>
+                     
+                </tr>             
+                            `;
+        });
+        tbody.innerHTML = htmls.join("");
+        const modalBody = document.querySelector(".modal-body");
+       tbody.querySelectorAll(".btn-danger").forEach((item,index)=>{
+        item.onclick = function () {
+          modalBody.innerHTML =
+
+                     `<div> <img src="${
+            tbody.querySelectorAll("tr")[index].querySelector(".product__img").querySelector("img").getAttribute("src")
+                    }" style="height:100px;width:100px" alt=""/>
+                     ${tbody.querySelectorAll("tr")[index].querySelector(".product__name").innerHTML}<span class="badge bg-success p-2 ml-3">${tbody.querySelectorAll("tr")[index].querySelector(".product__id").innerHTML}</span></div>`;
+                    
+        }
+
+//         // TESTTTTTTT
+//         $("#list").pagination({
+//             // you call the plugin
+//             dataSource: data, // pass all the data
+//             pageSize: 10, // put how many items per page you want
+//             callback: function (data, pagination) {
+//               // data will be chunk of your data (json.Product) per page
+//               // that you need to display
+//               var wrapper = $("#list .wrapper").empty();
+//               $.each(data, function (i, f) {
+//                 $(
+//                   "#list .wrapper"
+//                 ).append(`<tr>
+//                     <th scope="row" class="stt">${i + 1}</th>
+//                     <td class="product__id">${f.id}</td>
+//                     <td class="product__name">${f.name}</td>
+//                     <td class="product__img"> <img src="${
+//                       f.img
+//                     }" style="height:100px;width:100px" alt=""/></td>
+//                     <td class="product__price">${f.price}</td>
+//                     <td class="product__old_price">${f.old_price}</td>
+//                     <td class="product__sale">${f.sale}</td>
+//                     <td class="product__type">${f.type}</td>
+//                     <td class="product__new">${f.new}</td>
+//                     <td class="product__numbers">${f.numbers}</td>
+//                     <td class="product__size">${f.size}</td>
+//                     <td class="product__desc">${f.desc}</td>
+//                     <td><button type="button" class="btn btn-danger"  data-toggle="modal" data-target="#exampleModal">Xoá <i class="fas fa-trash-alt"></i></button><button type="button" class="btn btn-warning mt-1" data-toggle="modal" data-target="#exampleModal_form">Sửa <i class="fas fa-edit"></i></button>
+// </td>
+                     
+//                 </tr>   `);
+//               });
+//             },
+//           });
+  
+
+  //  console.log(lastPage);
+  
+  //  console.log(totalItems%totalPerPage)
+ 
+      });
+        handleDelete(modalBody);
+        call();
+        console.log(tbody);
+      })
+      .catch((error) => {
+        console.error("Error:", error);
+      });
+    
+  </script>
+  <script>
+    // Back to top
+    function backToTop() {
+      window.scroll({
+        top: 0,
+        behavior: "smooth",
+      });
+    }
+
+
+    // handle search
+    $(document).ready(function(){
+  $("#myInput").on("keyup", function() {
+    var value = $(this).val().toLowerCase();
+    $("#myTable tr").filter(function() {
+      $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+    });
+  });
+});
+//
+
+   var showCreateFormBtn = document.querySelector(".add_item_btn");
+   var createForm = document.querySelector(".create_form");
+   var exitBtn = document.querySelector(".exitBtn");
+   var cover = document.querySelector(".cover");
+   var view2 = document.querySelector(".view2");
+
+   showCreateFormBtn.onclick = function () {
+      createForm.style.opacity = 1;
+     createForm.style.top = "20px";
+    // cover.style.height =  document.body.clientHeight + 50 + "px";
+    cover.style.height =  "calc(100% + 50px)";
+    }
+    exitBtn.onclick  = function () {
+      createForm.style.opacity = 0;
+     createForm.style.top = "-600px";
+    cover.style.height =  0;
+
+    } 
+    changeCreateImg = () =>{
+    
+      view2.innerHTML = `<img src = "Images/${document.querySelector(".create_img").value.slice(12)}" style="width:150px;height:150px" alt=""/>`
+    }
+
+
+    
+ </script>
+</html>

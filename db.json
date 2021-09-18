@@ -1,0 +1,768 @@
+{
+  "admins": [
+    {
+      "name": "Nguyễn Văn A",
+      "nickname": "ADMIN",
+      "account": "nguyenvanA_123",
+      "password": "123456789"
+    }
+  ],
+  "users": [
+    {
+      "nameUser": "Nguyẽn Văn B",
+      "accountUser": "vanB123",
+      "passwordUser": "12345",
+      "emailUser": "vanB2000@gmail.com",
+      "check": false,
+      "cart": "",
+      "id": 1
+    },
+    {
+      "nameUser": "Nguyẽn Văn C",
+      "accountUser": "vanC123",
+      "passwordUser": "",
+      "emailUser": "vanB2000@gmail.com",
+      "check": false,
+      "cart": "",
+      "id": 1
+    }
+  ],
+  "products": [
+    {
+      "id": 1,
+      "name": "Áo phông Levi's",
+      "desc": "Áo phông trắng cộc tay",
+      "price": "500.000",
+      "img": "Images/shirt5.jpg",
+      "sale": "50%",
+      "old_price": "1.000.000 VND",
+      "type": "shirt",
+      "new": true,
+      "numbers": 1231,
+      "size": [
+        "S",
+        "L",
+        "XL"
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Áo hoodie BAPE",
+      "desc": "Áo hoodie đen unisex",
+      "price": "300.000",
+      "img": "Images/hoodie1.jpg",
+      "sale": "50%",
+      "old_price": "600.000 VND",
+      "type": "hoodie",
+      "numbers": 50,
+      "size": [
+        "M",
+        "XL",
+        "XXL"
+      ],
+      "new": true
+    },
+    {
+      "id": 3,
+      "name": "Áo khoác jean",
+      "desc": "Áo khoác jean hiệu Levi's/ Xanh dương / vải jean mềm",
+      "price": "550.000",
+      "img": "Images/LevisWomensJacket11.jpg",
+      "sale": "50%",
+      "old_price": "1.100.000 VND",
+      "type": "jacket",
+      "numbers": 100,
+      "size": [
+        "S",
+        "M",
+        "XL",
+        "XXL"
+      ],
+      "new": true
+    },
+    {
+      "id": 4,
+      "name": "T-shirt  MIKENCO",
+      "desc": "Áo cộc tay đen hiệu MIKENCO",
+      "price": "470000",
+      "img": "Images/shirt1.jpg",
+      "sale": "",
+      "old_price": "",
+      "type": "shirt",
+      "new": false,
+      "numbers": 123,
+      "size": [
+        "S",
+        "M",
+        "L"
+      ]
+    },
+    {
+      "id": 5,
+      "name": "T-shirt Pink",
+      "desc": "Áo cộc tay màu nền chời unisex",
+      "price": "275000",
+      "img": "Images/shirt3.jpeg",
+      "sale": "",
+      "old_price": "",
+      "type": "shirt",
+      "numbers": 80,
+      "size": [
+        "S",
+        "M",
+        "XXL"
+      ],
+      "new": false
+    },
+    {
+      "id": 6,
+      "name": "T-shirt LV",
+      "desc": "Áo cộc tay đen hiệu Luis Vuitton",
+      "price": "575000",
+      "img": "Images/shirt4.jpg",
+      "sale": "",
+      "old_price": "",
+      "type": "shirt",
+      "numbers": 100,
+      "size": [
+        "S",
+        "XL",
+        "XXL"
+      ],
+      "new": false
+    },
+    {
+      "id": 7,
+      "name": "T-shirt Levis's",
+      "desc": "Áo cộc tay đen hiệu Levi's màu xanh ngọc",
+      "price": "746.000",
+      "img": "Images/shirt6.jpg",
+      "sale": "25%",
+      "old_price": "995.000 VND",
+      "type": "shirt",
+      "numbers": 90,
+      "size": [
+        "S",
+        "M",
+        "XL",
+        "XXL"
+      ],
+      "new": true
+    },
+    {
+      "id": 8,
+      "name": "T-shirt LV",
+      "desc": "Áo cộc tay đen hiệu Luis Vuitton màu xanh họa tiết LV",
+      "price": "745.000",
+      "img": "Images/shirt7.jpg",
+      "sale": "25%",
+      "old_price": "995.000 VND",
+      "type": "shirt",
+      "numbers": 150,
+      "size": [
+        "S",
+        "M",
+        "XL"
+      ],
+      "new": false
+    },
+    {
+      "id": 9,
+      "name": "T-shirt LV II",
+      "desc": "Áo cộc tay đen hiệu Luis Vuitton màu trắng logo LV",
+      "price": "745.000",
+      "img": "Images/shirt8.jpg",
+      "sale": "25%",
+      "old_price": "995.000 VND",
+      "type": "shirt",
+      "numbers": 100,
+      "size": [
+        "S",
+        "M",
+        "XL",
+        "XXL"
+      ],
+      "new": false
+    },
+    {
+      "id": 10,
+      "name": "T-shirt BAPE",
+      "desc": "Áo cộc tay đen hiệu Luis BAPE màu đen logo BAPE",
+      "price": "700.000",
+      "img": "Images/shirt9.jpg",
+      "sale": "50%",
+      "old_price": "1.000.000 VND",
+      "type": "shirt",
+      "numbers": 40,
+      "size": [
+        "S",
+        "XL",
+        "XXL"
+      ],
+      "new": false
+    },
+    {
+      "id": 11,
+      "name": "T-shirt BAPE II",
+      "desc": "Áo cộc tay đen hiệu Luis BAPE màu đen logo BAPE monkey",
+      "price": "700.000",
+      "img": "Images/shirt10.jpg",
+      "sale": "50%",
+      "old_price": "1.000.000 VND",
+      "type": "shirt",
+      "numbers": 100,
+      "size": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "XXL"
+      ],
+      "new": false
+    },
+    {
+      "id": 12,
+      "name": "Hoodie Unisex II",
+      "desc": "Áo hoodie thun nam nữ",
+      "price": "350.000",
+      "img": "Images/hoodie2.jpg",
+      "sale": "50%",
+      "old_price": "700.000 VND",
+      "type": "hoodie",
+      "numbers": 120,
+      "size": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "XXL"
+      ],
+      "new": false
+    },
+    {
+      "id": 13,
+      "name": "Hoodie Unisex Baby",
+      "desc": "Áo hoodie thun nam nữ hàng chuẩn auth",
+      "price": "1.350.000",
+      "img": "Images/hoodie3.jpg",
+      "sale": "",
+      "old_price": "",
+      "type": "hoodie",
+      "numbers": 100,
+      "size": [
+        "S",
+        "M",
+        "XL",
+        "XXL"
+      ],
+      "new": false
+    },
+    {
+      "id": 14,
+      "name": "Hoodie Drew",
+      "desc": "Áo hoodie thun nam nữ hàng chuẩn auth Drew",
+      "price": "1.150.000",
+      "img": "Images/hoodie4.jpg",
+      "sale": "",
+      "old_price": "",
+      "type": "hoodie",
+      "numbers": 100,
+      "size": [
+        "S",
+        "M",
+        "XL",
+        "XXL"
+      ],
+      "new": true
+    },
+    {
+      "id": 15,
+      "name": "Hoodie Unisex Mickey",
+      "desc": "Áo hoodie thun nam nữ hàng chuẩn auth",
+      "price": "1.550.000",
+      "img": "Images/hoodie5.jpg",
+      "sale": "",
+      "old_price": "",
+      "type": "hoodie",
+      "numbers": 50,
+      "size": [
+        "S",
+        "XL",
+        "XXL"
+      ],
+      "new": false
+    },
+    {
+      "id": 16,
+      "name": "Jacket USA",
+      "desc": "Áo khoác thun nam nữ hàng chuẩn auth",
+      "price": "900.000",
+      "img": "Images/jacket1.jpg",
+      "sale": "25%",
+      "old_price": "1.200.000 VND",
+      "type": "jacket",
+      "numbers": 10,
+      "size": [
+        "S",
+        "M",
+        "XL"
+      ],
+      "new": true
+    },
+    {
+      "id": 17,
+      "name": "Jacket Baseball",
+      "desc": "Áo hoodie bóng chày nam nữ",
+      "price": "620.000",
+      "img": "Images/jacket2.jpg",
+      "sale": "",
+      "old_price": "",
+      "type": "jacket",
+      "numbers": 100,
+      "size": [
+        "S",
+        "M",
+        "XL",
+        "XXL"
+      ],
+      "new": false
+    },
+    {
+      "id": 18,
+      "name": "Jacket Baseball II",
+      "desc": "Áo khoác bóng chày nam nữ",
+      "price": "670.000",
+      "img": "Images/jacket3.jpg",
+      "sale": "",
+      "old_price": "",
+      "type": "jacket",
+      "numbers": 10,
+      "size": [
+        "S",
+        "M",
+        "XL"
+      ],
+      "new": false
+    },
+    {
+      "id": 19,
+      "name": "Jacket Anime",
+      "desc": "Áo khoác nam nữ anime jujutsu kaisen",
+      "price": "752.000",
+      "img": "Images/jacket4.jpg",
+      "sale": "15%",
+      "old_price": "885.000 VND",
+      "type": "jacket",
+      "numbers": 132,
+      "size": [
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
+      "new": false
+    },
+    {
+      "id": 20,
+      "name": "Jacket Vintage Bomber",
+      "desc": "Áo khoác nam nữ Vintage Bomber kiểu dáng áo khoác bóng chày",
+      "price": "750.000",
+      "img": "Images/jacket5.jpg",
+      "sale": "15%",
+      "old_price": "885.000 VND",
+      "type": "jacket",
+      "numbers": 100,
+      "size": [
+        "S",
+        "M",
+        "XL",
+        "XXL"
+      ],
+      "new": true
+    },
+    {
+      "id": 21,
+      "name": "Jacket Denim Gucci",
+      "desc": "Áo khoác nam nữ auth Gucci chất liệu jean/denim",
+      "price": "1.750.000",
+      "img": "Images/jacket6.jpg",
+      "sale": "",
+      "old_price": "",
+      "type": "jacket",
+      "numbers": 110,
+      "size": [
+        "S",
+        "M",
+        "XXL"
+      ],
+      "new": true
+    },
+    {
+      "id": 22,
+      "name": "Jeans rách gối",
+      "desc": "Quần jean nam rách gối màu xanh nhạt",
+      "price": "280.000",
+      "img": "Images/jeans1.jpg",
+      "sale": "",
+      "old_price": "",
+      "type": "jeans",
+      "numbers": 110,
+      "size": [
+        "S",
+        "M",
+        "XL",
+        "XXL"
+      ],
+      "new": true
+    },
+    {
+      "id": 23,
+      "name": "Jeans xám slim",
+      "desc": "Quần jean nam slim fit màu xám",
+      "price": "345.000",
+      "img": "Images/jeans2.jpg",
+      "sale": "",
+      "old_price": "",
+      "type": "jeans",
+      "numbers": 120,
+      "size": [
+        "S",
+        "M",
+        "L",
+        "XXL"
+      ],
+      "new": false
+    },
+    {
+      "id": 24,
+      "name": "Jeans đen rách gối",
+      "desc": "Quần jean nam đen rách gối",
+      "price": "345.000",
+      "img": "Images/jeans3.jpg",
+      "sale": "",
+      "old_price": "",
+      "type": "jeans",
+      "numbers": 100,
+      "size": [
+        "S",
+        "M",
+        "XL",
+        "XXL"
+      ],
+      "new": true
+    },
+    {
+      "id": 25,
+      "name": "Jeans xám rách slim",
+      "desc": "Quần jean nam xám rách slim màu ngà trắng",
+      "price": "300.000",
+      "img": "Images/jeans4.jpg",
+      "sale": "50%",
+      "old_price": "600.000 VND",
+      "type": "jeans",
+      "numbers": 105,
+      "size": [
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
+      "new": false
+    },
+    {
+      "id": 26,
+      "name": "Jeans xám rách slim",
+      "desc": "Quần jean nam xám rách slim màu ngà trắng",
+      "price": "390.000",
+      "img": "Images/jeans5.jpg",
+      "sale": "29%",
+      "old_price": "550.000 VND",
+      "type": "jeans",
+      "numbers": 200,
+      "size": [
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
+      "new": true
+    },
+    {
+      "id": 27,
+      "name": "Quần short I",
+      "desc": "Short ngắn có dây thun màu đen",
+      "price": "390.000",
+      "img": "Images/short1.jpg",
+      "sale": "22%",
+      "old_price": "500.000 VND",
+      "type": "short",
+      "numbers": 100,
+      "size": [
+        "S",
+        "M",
+        "XL",
+        "XXL"
+      ],
+      "new": true
+    },
+    {
+      "id": 28,
+      "name": "Quần short II",
+      "desc": "Short ngắn có dây thun màu nâu",
+      "price": "390.000",
+      "img": "Images/short2.jpg",
+      "sale": "22%",
+      "old_price": "500.000 VND",
+      "type": "short",
+      "numbers": 100,
+      "size": [
+        "S",
+        "M",
+        "XL",
+        "XXL"
+      ],
+      "new": false
+    },
+    {
+      "id": 29,
+      "name": "Quần short III",
+      "desc": "Short ngắn có dây thun màu rêu",
+      "price": "390.000",
+      "img": "Images/short3.jpg",
+      "sale": "22%",
+      "old_price": "500.000 VND",
+      "type": "short",
+      "numbers": 100,
+      "size": [
+        "S",
+        "M",
+        "L",
+        "XXL"
+      ],
+      "new": false
+    },
+    {
+      "id": 30,
+      "name": "Quần short xanh chuối",
+      "desc": "Short ngắn có dây thun màu xanh chuối nam nữ",
+      "price": "200.000",
+      "img": "Images/short4.jpg",
+      "sale": "",
+      "old_price": "",
+      "type": "short",
+      "numbers": 210,
+      "size": [
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
+      "new": true
+    },
+    {
+      "id": 31,
+      "name": "Quần short đen",
+      "desc": "Short ngắn có dây thun màu đen",
+      "price": "150.000",
+      "img": "Images/short5.jpg",
+      "sale": "50%",
+      "old_price": "300.000 VND",
+      "type": "short",
+      "numbers": 100,
+      "size": [
+        "S",
+        "M",
+        "XL",
+        "XXL"
+      ],
+      "new": true
+    },
+    {
+      "id": 33,
+      "name": "Kính thời trang abc",
+      "desc": "Kính không độ",
+      "price": "200.000",
+      "img": "Images/glasses.jpg",
+      "sale": "",
+      "old_price": "",
+      "type": "glasses",
+      "new": true,
+      "numbers": 123,
+      "size": [
+        "S",
+        "M"
+      ]
+    },
+    {
+      "name": "Kính đen thời trang",
+      "desc": "kính chất liệu thân thiện, bảo vệ mắt",
+      "price": "200.000",
+      "img": "Images/glasses2.jpg",
+      "sale": "",
+      "old_price": "",
+      "type": "glasses",
+      "numbers": 200,
+      "size": [
+        "S",
+        "M",
+        "L"
+      ],
+      "new": true,
+      "id": 34
+    },
+    {
+      "name": "Kính không độ",
+      "desc": "Kính thời trang không độ",
+      "price": "215.000",
+      "img": "Images/glasses1.jpg",
+      "sale": "50%",
+      "old_price": "430.000 VND",
+      "type": "glasses",
+      "numbers": 50,
+      "size": [
+        "S",
+        "M"
+      ],
+      "new": true,
+      "id": 35
+    },
+    {
+      "name": "Kính III",
+      "desc": "kính thời trang mọi lứa tuổi",
+      "price": "300.000",
+      "img": "Images/glasses3.jpg",
+      "sale": "",
+      "old_price": "",
+      "type": "glasses",
+      "numbers": 100,
+      "size": [
+        "S",
+        "M",
+        "L"
+      ],
+      "new": true,
+      "id": 37
+    },
+    {
+      "name": "Túi sách Gucci",
+      "desc": "Túi sách hiệu gucci nữ",
+      "price": "500.000",
+      "img": "Images/bag1.png",
+      "sale": "50%",
+      "old_price": "1.000.000 VND",
+      "type": "bag",
+      "new": true,
+      "numbers": 12,
+      "size": [
+        "S",
+        "M"
+      ],
+      "id": 38
+    },
+    {
+      "name": "Túi sách gucci II",
+      "desc": "Túi gucci cho nữ, thiết kế độc đáo",
+      "price": "300.000",
+      "img": "Images/bag2.png",
+      "sale": "",
+      "old_price": "",
+      "type": "bag",
+      "new": true,
+      "numbers": 14,
+      "size": [
+        "M"
+      ],
+      "id": 39
+    },
+    {
+      "name": "Túi sách nam",
+      "desc": "Túi sách nam lịch sự, thích hợp đi làm, du lịch , màu đen , da động vật,...",
+      "price": "230.000",
+      "img": "Images/bag5.png",
+      "sale": "50%",
+      "old_price": "460.000 VND",
+      "type": "bag",
+      "new": true,
+      "numbers": 120,
+      "size": [
+        "S",
+        "M",
+        "L"
+      ],
+      "id": 40
+    },
+    {
+      "name": "Túi sách unisex",
+      "desc": "Túi sách nam nữ unisex, hiệu Levis, màu đen",
+      "price": "400.000",
+      "img": "Images/bag3.png",
+      "sale": "",
+      "old_price": "",
+      "type": "bag",
+      "new": true,
+      "numbers": 127,
+      "size": [
+        "M"
+      ],
+      "id": 41
+    },
+    {
+      "id": 42,
+      "name": "Túi sách gucci",
+      "desc": "Túi sách nữ quyền quý hiệu gucci",
+      "price": "1.700.000",
+      "img": "Images/bag4.png",
+      "sale": "",
+      "old_price": "",
+      "type": "bag",
+      "new": true,
+      "numbers": 7,
+      "size": [
+        "M"
+      ]
+    },
+    {
+      "name": "fdas",
+      "desc": "",
+      "price": "",
+      "img": "Images/bag1.png",
+      "sale": "",
+      "old_price": "",
+      "type": "",
+      "new": false,
+      "numbers": null,
+      "size": [
+        ""
+      ],
+      "id": 43
+    },
+    {
+      "name": "Ao khoac",
+      "desc": "áo khoác jean",
+      "price": "300.000",
+      "img": "Images/jacket6.jpg",
+      "sale": "50%",
+      "old_price": "600.000 VND",
+      "type": "jacket",
+      "new": true,
+      "numbers": 12,
+      "size": [
+        "S",
+        "M",
+        "L"
+      ],
+      "id": 44
+    },
+    {
+      "name": "Kính thời trang AuTH",
+      "desc": "Kính thời trang",
+      "price": "150.000",
+      "img": "Images/glasses.jpg",
+      "sale": "50%",
+      "old_price": "200.000 VND",
+      "type": "glasses",
+      "new": "true",
+      "id": 45
+    }
+  ]
+}
